@@ -1,0 +1,72 @@
+#main-flip-square-container {
+  height: 20vw;
+  width: 20vw;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+}
+
+#small-flip-square-container {
+  height: 90%;
+  width: 90%;
+  margin: auto;
+  align-self: center;
+  justify-self: center;
+}
+
+#small-flip-square-container:hover {
+  cursor: url("./Click-me-image-medium.png") 45 12, pointer;
+}
+
+.small-flip-square-container-open {
+    background-color: rgb(87, 26, 144);
+}
+
+.small-flip-square-container-close {
+    background-color: blueviolet;
+}
+
+.animation-open {
+  clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+  animation-name: flip-square-open;
+  animation-duration: 700ms;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes flip-square-open {
+  0% {
+    clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+    background-color: blueviolet;
+}
+50% {
+    clip-path: polygon(50% 0%, 50% 15%, 50% 85%, 50% 100%);
+}
+100% {
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    background-color: rgb(87, 26, 144);
+  }
+}
+
+.animation-close {
+  clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+  animation-name: flip-square-close;
+  animation-duration: 700ms;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes flip-square-close {
+  0% {
+    clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
+    background-color: rgb(87, 26, 144);
+}
+50% {
+    clip-path: polygon(50% 0%, 50% 15%, 50% 85%, 50% 100%);
+}
+100% {
+    clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
+    background-color: blueviolet;
+  }
+}

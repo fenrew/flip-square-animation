@@ -1,0 +1,11 @@
+.about-me-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 4%;
+}
+
+.about-me-header{
+    text-align: center;
+}
